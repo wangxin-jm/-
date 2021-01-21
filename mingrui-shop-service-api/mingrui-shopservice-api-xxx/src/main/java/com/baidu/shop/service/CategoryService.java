@@ -35,4 +35,8 @@ public interface CategoryService {
     @PutMapping(value="category/upfate")
     Result<JsonObject> update(@RequestBody CategoryEntity categoryEntity);
 
+    @ApiOperation(value = "通过品牌查询分类id")
+    @GetMapping(value="category/brand")
+    Result<List<CategoryEntity>> getSelectBrandById(Integer pid);
+
 }
