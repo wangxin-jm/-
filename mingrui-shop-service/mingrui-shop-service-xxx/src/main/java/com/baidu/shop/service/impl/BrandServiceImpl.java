@@ -24,10 +24,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * 2 * @ClassName BrandServiceImpl
+ * 2 * @ClassName JSONUtil
  * 3 * @Description: TODO
  * 4 * @Author wangxin
- * 5 * @Date 2020/12/25
+ * 5 * @Date 2021/1/20
  * 6 * @Version V1.0
  * 7
  **/
@@ -101,7 +101,7 @@ public class BrandServiceImpl extends BaseApiService implements BrandService {
 //
 //            categoryBrandMapper.insertSelective(categoryBrandEntity);
 //        }
-        
+
         this.categoryBrandSaveList(brandDTO.getCategories(),brandEntity.getId());
         return this.setResultSuccess();
     }

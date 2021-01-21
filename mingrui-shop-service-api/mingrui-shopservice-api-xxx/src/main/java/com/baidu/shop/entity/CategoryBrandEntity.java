@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Table;
 
 /**
- * 2 * @ClassName CategoryEntityBrandEntity
+ * 2 * @ClassName JSONUtil
  * 3 * @Description: TODO
  * 4 * @Author wangxin
- * 5 * @Date 2020/12/28
+ * 5 * @Date 2021/1/20
  * 6 * @Version V1.0
  * 7
  **/
