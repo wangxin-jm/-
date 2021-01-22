@@ -11,7 +11,7 @@ import org.springframework.web.filter.CorsFilter;
  * 2 * @ClassName GlobalCorsConfig
  * 3 * @Description: TODO
  * 4 * @Author wangxin
- * 5 * @Date 2021/1/21
+ * 5 * @Date 2021/1/22
  * 6 * @Version V1.0
  * 7
  **/
