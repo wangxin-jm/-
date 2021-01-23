@@ -21,6 +21,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CategoryBrandEntity {
+    //品牌中间表实体类
 
     private Integer categoryId;
 

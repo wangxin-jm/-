@@ -40,6 +40,7 @@ public class BrandServiceImpl extends BaseApiService implements BrandService {
     @Resource
     private CategoryBrandMapper categoryBrandMapper;
 
+//    查询
     @Override
     public Result<List<BrandEntity>> getListCategoryBrand(Integer cid) {
 

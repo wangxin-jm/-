@@ -11,4 +11,5 @@ public interface BrandMapper extends Mapper<BrandEntity> {
 
     @Select(value="SELECT * FROM  `tb_brand` WHERE id IN (SELECT t.`brand_id` FROM `tb_category_brand` t WHERE t.`category_id`= #{cid})")
     List<BrandEntity> getListCategoryBrand(Integer cid);
+    //品牌mapper
 }

@@ -18,6 +18,7 @@ import javax.persistence.Table;
 @Table(name = "tb_brand")
 @Data
 public class BrandEntity {
+    //品牌实现类
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
