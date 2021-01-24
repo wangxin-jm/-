@@ -48,6 +48,7 @@ public class BrandServiceImpl extends BaseApiService implements BrandService {
         return this.setResultSuccess(listCategoryBrand);
     }
 
+    //删除
     @Override
     @Transactional
     public Result<JSONObject> delete(Integer id) {

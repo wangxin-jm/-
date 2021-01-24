@@ -16,6 +16,7 @@ import java.util.List;
 @Api(tags = "品牌分类接口")
 public interface BrandService {
 
+    //查询
     @GetMapping(value = "brand/list")
     @ApiOperation(value ="查询商品")
     Result<PageInfo<BrandEntity>> list(BrandDTO brandDTO);
