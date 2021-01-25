@@ -66,6 +66,7 @@ public class BrandServiceImpl extends BaseApiService implements BrandService {
 
 
 
+    //修改
     @Override
     @Transactional
     public Result<JSONObject> update(BrandDTO brandDTO) {
@@ -109,6 +110,7 @@ public class BrandServiceImpl extends BaseApiService implements BrandService {
     }
 
 
+    //查询
     @Override
     public Result<PageInfo<BrandEntity>> list(BrandDTO brandDTO) {
         //分页 给他们赋值

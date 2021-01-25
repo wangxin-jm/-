@@ -21,10 +21,12 @@ public interface BrandService {
     @ApiOperation(value ="查询商品")
     Result<PageInfo<BrandEntity>> list(BrandDTO brandDTO);
 
+    //新增
     @PostMapping(value="brand/save")
     @ApiOperation(value="新增数据")
     Result<JSONObject> save(@Validated({MingruiOperation.Add.class})@RequestBody BrandDTO brandDTO);
 
+    //修改
     @PutMapping(value="brand/save")
     @ApiOperation(value="修改数据数据")
     Result<JSONObject> update(@Validated({MingruiOperation.Update.class})@RequestBody BrandDTO brandDTO);
