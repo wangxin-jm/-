@@ -74,36 +74,8 @@ public class BrandServiceImpl extends BaseApiService implements BrandService {
         brandEntity.setLetter(PinyinUtil.getUpperCase(brandEntity.getName(),false).toCharArray()[0]);
         mapper.updateByPrimaryKeySelective(brandEntity);
 
-        //删除中间表的数据
-//        Example example = new Example(CategoryBrandEntity.class);
-//        example.createCriteria().andEqualTo("brandId",brandEntity.getId());
-//        categoryBrandMapper.deleteByExample(example);
         this.deleteCategoryBrandBybrandId(brandEntity.getId());
 
-//        //批量新增
-//        String categories = brandDTO.getCategories();//得到分类集合字符串
-//        if(StringUtils.isEmpty(brandDTO.getCategories())) return this.setResultError("");
-//
-//
-//        //判断分类集合字符串中是否包含,
-//        if(categories.contains(",")){//多个分类 --> 批量新增
-//
-//            categoryBrandMapper.insertList(
-//                    Arrays.asList(categories.split(","))
-//                            .stream()
-//                            .map(categoryIdStr -> new CategoryBrandEntity(Integer.valueOf(categoryIdStr)
-//                                    ,brandEntity.getId()))
-//                            .collect(Collectors.toList())
-//            );
-//
-//        }else{//普通单个新增
-//
-//            CategoryBrandEntity categoryBrandEntity = new CategoryBrandEntity();
-//            categoryBrandEntity.setBrandId(brandEntity.getId());
-//            categoryBrandEntity.setCategoryId(Integer.valueOf(categories));
-//
-//            categoryBrandMapper.insertSelective(categoryBrandEntity);
-//        }
 
         this.categoryBrandSaveList(brandDTO.getCategories(),brandEntity.getId());
         return this.setResultSuccess();

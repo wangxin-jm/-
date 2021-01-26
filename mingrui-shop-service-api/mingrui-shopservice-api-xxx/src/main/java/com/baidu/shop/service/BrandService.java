@@ -30,7 +30,7 @@ public interface BrandService {
     @PutMapping(value="brand/save")
     @ApiOperation(value="修改数据数据")
     Result<JSONObject> update(@Validated({MingruiOperation.Update.class})@RequestBody BrandDTO brandDTO);
-
+//删除
     @DeleteMapping(value="brand/delete")
     @ApiOperation(value="删除品牌分类")
     Result<JSONObject> delete(Integer id);
