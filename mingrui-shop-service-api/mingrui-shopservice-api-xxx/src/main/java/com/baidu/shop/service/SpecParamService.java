@@ -28,7 +28,7 @@ public interface SpecParamService {
     @ApiOperation("规格参数新增")
     @PostMapping("specParam/save")
     Result<JSONObject> save(@Validated({MingruiOperation.Add.class})@RequestBody SpecParamDTO specParamDTO);
-
+//修改
     @ApiOperation("规格参数修改")
     @PutMapping("specParam/save")
     Result<JSONObject> update(@Validated({MingruiOperation.Update.class})@RequestBody SpecParamDTO specParamDTO);

@@ -42,7 +42,7 @@ public class SpecParamServiceImpl  extends BaseApiService implements SpecParamSe
 
         return this.setResultSuccess(specParamEntities);
     }
-
+//增加
     @Override
     @Transactional
     public Result<JSONObject> save(SpecParamDTO specParamDTO) {

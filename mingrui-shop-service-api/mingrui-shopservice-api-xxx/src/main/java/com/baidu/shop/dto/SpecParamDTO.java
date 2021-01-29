@@ -25,7 +25,7 @@ public class SpecParamDTO extends BaseDTO {
     @NotNull(message = "主键不能为空", groups = {MingruiOperation.Update.class})
     private Integer id;
 
-    @ApiModelProperty(value = "分类id", example = "1")
+    @ApiModelProperty(value = "分类id1", example = "1")
     @NotNull(message = "cid不能为空", groups={MingruiOperation.Update.class,MingruiOperation.Add.class})
     private Integer cid;
 
