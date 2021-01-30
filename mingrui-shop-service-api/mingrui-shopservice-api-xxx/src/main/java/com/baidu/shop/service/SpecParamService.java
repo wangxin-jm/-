@@ -20,11 +20,11 @@ import org.springframework.web.bind.annotation.*;
  **/
 @Api(tags = "规格参数接口")
 public interface SpecParamService {
-
+//查询
     @ApiOperation("规格参数查询")
     @GetMapping("specParam/list")
     Result<SpecParamEntity> list(SpecParamDTO specParamDTO);
-
+//规格参数新增
     @ApiOperation("规格参数新增")
     @PostMapping("specParam/save")
     Result<JSONObject> save(@Validated({MingruiOperation.Add.class})@RequestBody SpecParamDTO specParamDTO);
@@ -32,7 +32,7 @@ public interface SpecParamService {
     @ApiOperation("规格参数修改")
     @PutMapping("specParam/save")
     Result<JSONObject> update(@Validated({MingruiOperation.Update.class})@RequestBody SpecParamDTO specParamDTO);
-
+//删除规格参数
     @ApiOperation("删除规格参数")
     @DeleteMapping("specParam/delete")
     Result<JSONObject> delete(Integer id);

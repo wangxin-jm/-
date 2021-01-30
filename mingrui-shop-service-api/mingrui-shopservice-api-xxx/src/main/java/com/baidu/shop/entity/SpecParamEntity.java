@@ -25,7 +25,7 @@ public class SpecParamEntity {
     private Integer groupId;
 
     private String name;
-//标记
+//因为他是关键字
     @Column(name = "`numeric`")
     private Boolean numeric;
 

@@ -50,7 +50,7 @@ public class SpecParamServiceImpl  extends BaseApiService implements SpecParamSe
         spenParamMapper.insertSelective(BaiduBeanUtil.beanUtil(specParamDTO, SpecParamEntity.class));
         return this.setResultSuccess("成功");
     }
-
+//修改
     @Override
     @Transactional
     public Result<JSONObject> update(SpecParamDTO specParamDTO) {

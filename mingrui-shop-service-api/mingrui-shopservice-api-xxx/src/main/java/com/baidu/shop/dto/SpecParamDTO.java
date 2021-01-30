@@ -29,7 +29,7 @@ public class SpecParamDTO extends BaseDTO {
     @NotNull(message = "cid不能为空", groups={MingruiOperation.Update.class,MingruiOperation.Add.class})
     private Integer cid;
 
-    @ApiModelProperty(value = "规格组id", example = "1")
+    @ApiModelProperty(value = "规格组id1", example = "1")
     @NotNull(message = "cid不能为空", groups={MingruiOperation.Update.class,MingruiOperation.Add.class})
     private Integer groupId;
 
