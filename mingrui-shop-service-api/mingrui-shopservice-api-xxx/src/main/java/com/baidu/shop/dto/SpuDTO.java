@@ -14,7 +14,7 @@ import java.util.Date;
  * 2 * @ClassName SpuDTO
  * 3 * @Description: TODO
  * 4 * @Author wangxin
- * 5 * @Date 2021/2/1
+ * 5 * @Date 2021/2/2
  * 6 * @Version V1.0
  * 7
  **/
@@ -42,16 +42,12 @@ public class SpuDTO extends BaseDTO {
     @NotNull(message = "商品所属品牌id不能为空", groups =
             {MingruiOperation.Add.class})
     private Integer brandId;
-    //不需要验证,新增时直接设置默认值
     @ApiModelProperty(value = "是否上架，0下架，1上架", example = "1")
     private Integer saleable;
-    //不需要验证,新增时直接设置默认值
     @ApiModelProperty(value = "是否有效，0已删除，1有效", example = "1")
     private Integer valid;
-    //不需要验证,新增时直接设置默认值
     @ApiModelProperty(value = "添加时间")
     private Date createTime;
-    //不需要验证,新增时直接设置默认值,修改时使用java代码赋值
     @ApiModelProperty(value = "最后修改时间")
     private Date lastUpdateTime;
     private String brandName;

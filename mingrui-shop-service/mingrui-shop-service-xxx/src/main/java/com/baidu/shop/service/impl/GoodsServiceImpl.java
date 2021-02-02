@@ -66,7 +66,7 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
             SpuDTO spuDTO1 = BaiduBeanUtil.beanUtil(spuEntity, SpuDTO.class);
 
 
-            //使用多查询,查询出三条数据
+            //使用多查询,查询出三条数据1
             List<CategoryEntity> categoryEntities = categoryMapper.selectByIdList(Arrays.asList(spuDTO1.getCid1(), spuDTO1.getCid2(), spuDTO1.getCid3()));
             //把三条数据的name用/拼接
             String collect = categoryEntities.stream().map(CategoryEntity -> CategoryEntity.getName()).collect(Collectors.joining("/"));
