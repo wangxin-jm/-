@@ -37,7 +37,8 @@ public class SpecParamServiceImpl  extends BaseApiService implements SpecParamSe
         Example.Criteria criteria = example.createCriteria();
         if(UtilNull.isNotNull(specParamDTO.getGroupId()))
             criteria.andEqualTo("groupId", BaiduBeanUtil.beanUtil(specParamDTO,SpecParamEntity.class).getGroupId());
-
+        if(UtilNull.isNotNull(specParamDTO.getCid()))
+            criteria.andEqualTo("cid",BaiduBeanUtil.beanUtil(specParamDTO,SpecParamEntity.class).getCid());
         List<SpecParamEntity> specParamEntities = spenParamMapper.selectByExample(example);
 
         return this.setResultSuccess(specParamEntities);
